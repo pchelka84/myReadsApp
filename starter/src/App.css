@@ -50,8 +50,6 @@ body,
   position: fixed;
   right: 25px;
   bottom: 25px;
-}
-.open-search a {
   display: block;
   width: 50px;
   height: 50px;
