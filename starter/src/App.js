@@ -2,8 +2,8 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 
-import HomeView from "./HomeView";
-import SearchView from "./SearchView";
+import HomeView from "./components/HomeView";
+import SearchView from "./components/SearchView";
 
 function App() {
   return (
