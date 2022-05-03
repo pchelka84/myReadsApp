@@ -1,8 +1,15 @@
 import React from "react";
 
-const Book = ({ book }) => {
-  console.log(book);
+const Book = ({ book, shelf, updateShelf }) => {
   let showBookImage = book.imageLinks ? book.imageLinks.thumbnail : "";
+
+  const handleChange = (e) => {
+    const newShelf = e.target.value;
+
+    if (updateShelf) {
+      updateShelf(book, newShelf);
+    }
+  };
 
   return (
     <div className='book'>
@@ -16,7 +23,7 @@ const Book = ({ book }) => {
           }}
         ></div>
         <div className='book-shelf-changer'>
-          <select>
+          <select value={shelf} onChange={handleChange}>
             <option value='none' disabled>
               Move to...
             </option>

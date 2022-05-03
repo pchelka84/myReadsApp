@@ -15,6 +15,12 @@ const HomeView = () => {
     getBooks();
   }, []);
 
+  const updateShelf = (book, shelf) => {
+    BooksAPI.update(book, shelf)
+      .then(() => BooksAPI.getAll())
+      .then((books) => setBooks(books));
+  };
+
   return (
     <div className='list-books'>
       <div className='list-books-title'>
@@ -22,16 +28,22 @@ const HomeView = () => {
       </div>
       <div className='list-books-content'>
         <BookShelf
+          shelfName='Currently Reading'
           shelf='currentlyReading'
           books={books.filter((book) => book.shelf === "currentlyReading")}
+          updateShelf={updateShelf}
         />
         <BookShelf
+          shelfName='Want to Read'
           shelf='wantToRead'
           books={books.filter((book) => book.shelf === "wantToRead")}
+          updateShelf={updateShelf}
         />
         <BookShelf
+          shelfName='Read'
           shelf='read'
           books={books.filter((book) => book.shelf === "read")}
+          updateShelf={updateShelf}
         />
       </div>
       <Link className='open-search' to='/search'>
