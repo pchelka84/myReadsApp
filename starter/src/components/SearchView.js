@@ -17,8 +17,6 @@ const SearchView = ({ books, updateShelf }) => {
       BooksAPI.search(query).then((searchedBooks) => {
         searchedBooks.error ? setBooksFound([]) : setBooksFound(searchedBooks);
       });
-    } else {
-      setBooksFound([]);
     }
   };
 
