@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
-import React from "react";
+import React, { useState } from "react";
 
-const SearchView = () => {
+const SearchView = ({ books, updateShelf }) => {
+  const [query, setQuery] = useState("");
+
   return (
     <div className='search-books'>
       <div className='search-books-bar'>
@@ -9,7 +11,12 @@ const SearchView = () => {
           Close
         </Link>
         <div className='search-books-input-wrapper'>
-          <input type='text' placeholder='Search by title, author, or ISBN' />
+          <input
+            type='text'
+            placeholder='Search by title, author, or ISBN'
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+          />
         </div>
       </div>
       <div className='search-books-results'>

@@ -32,7 +32,11 @@ function App() {
           path='/'
           element={<HomeView books={books} updateShelf={updateShelf} />}
         />
-        <Route exact path='/search' element={<SearchView />} />
+        <Route
+          exact
+          path='/search'
+          element={<SearchView books={books} updateShelf={updateShelf} />}
+        />
       </Routes>
     </div>
   );
