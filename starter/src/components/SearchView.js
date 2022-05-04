@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import * as BooksAPI from "../BooksAPI";
 import Book from "./Book";
+import PropTypes from "prop-types";
 
 const SearchView = ({ books, updateShelf }) => {
   const [query, setQuery] = useState("");
@@ -58,6 +59,11 @@ const SearchView = ({ books, updateShelf }) => {
       </div>
     </div>
   );
+};
+
+SearchView.propTypes = {
+  books: PropTypes.array.isRequired,
+  updateShelf: PropTypes.func.isRequired,
 };
 
 export default SearchView;

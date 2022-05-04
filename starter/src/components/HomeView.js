@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import BookShelf from "./BookShelf";
+import PropTypes from "prop-types";
 
 const HomeView = ({ books, updateShelf }) => {
   return (
@@ -33,6 +34,11 @@ const HomeView = ({ books, updateShelf }) => {
       </Link>
     </div>
   );
+};
+
+HomeView.propTypes = {
+  books: PropTypes.array.isRequired,
+  updateShelf: PropTypes.func.isRequired,
 };
 
 export default HomeView;
