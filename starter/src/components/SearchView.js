@@ -40,23 +40,24 @@ const SearchView = ({ books, updateShelf }) => {
       </div>
       <div className='search-books-results'>
         <ol className='books-grid'>
-          {booksFound.map((bookFound) => {
-            let shelf = "none";
+          {query &&
+            booksFound.map((bookFound) => {
+              let shelf = "none";
 
-            books.map((book) =>
-              book.id === bookFound.id ? (shelf = book.shelf) : ""
-            );
+              books.map((book) =>
+                book.id === bookFound.id ? (shelf = book.shelf) : ""
+              );
 
-            return (
-              <li key={bookFound.id}>
-                <Book
-                  book={bookFound}
-                  shelf={shelf}
-                  updateShelf={updateShelf}
-                />
-              </li>
-            );
-          })}
+              return (
+                <li key={bookFound.id}>
+                  <Book
+                    book={bookFound}
+                    shelf={shelf}
+                    updateShelf={updateShelf}
+                  />
+                </li>
+              );
+            })}
         </ol>
       </div>
     </div>

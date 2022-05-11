@@ -6,7 +6,7 @@ This project was build wit the starter template (static example of the CSS and H
 
 ## How to run
 
-1. Download or clobe the repository.
+1. Download or clone the repository.
 
 2. Run `npm install` to install dependencies.
 
