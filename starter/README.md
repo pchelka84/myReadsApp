@@ -1,10 +1,10 @@
 # MyReads Project
 
-The main page of the application shows three shelves with books. A user can move between shelves with the controls that are tied to each book instance. The search page contains a search input field. As the user types into the search field, books that match the query are displayed on the page, along with their titles and authors. Search results are not shown when all of the text is deleted out of the search input box. The user is able to search for multiple words, suc has "artificial intelligence". Serch results on the search page allow the user to select "Currently Reading", "Want to Read", or "Read" to placce the book in a certain shelf. When an item us categorized in the search page, it also appears in the main page.
+The main page of the application shows three shelves with books. A user can move between shelves with the controls that are tied to each book instance. The search page contains a search input field. As the user types into the search field, books that match the query are displayed on the page, along with their titles and authors. Search results are not shown when all of the text is deleted out of the search input box. The user is able to search for multiple words, suc has "artificial intelligence". Search results on the search page allow the user to select "Currently Reading", "Want to Read", or "Read" to placce the book in a certain shelf. When an item us categorized in the search page, it also appears in the main page.
 
 This project was build wit the starter template (static example of the CSS and HTML markup without the React code) provided by Udacity.
 
-## How to run
+## Installation
 
 1. Download or clone the repository.
 
